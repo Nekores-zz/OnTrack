@@ -68,7 +68,7 @@ const App = () => {
   };
   return (
     <div className="App">
-      <header className="App-header"></header>
+        <h1>This page is for DEMO</h1>
     </div>
   );
 };
