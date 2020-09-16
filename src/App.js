@@ -23,10 +23,10 @@ const App = () => {
       user["screen_resolution"] =
         window.screen.width + " x " + window.screen.height;
       user["device"] =
-        window.width <= "767"
+        window.frames.innerWidth <= "767"
           ? "Mobile Phone"
           : window.frames.innerWidth <= "991" &&
-            window.frames.innerHeight >= "768"
+            window.frames.innerWidth >= "768"
           ? "Tablet"
           : "Desktop";
 
@@ -68,7 +68,7 @@ const App = () => {
   };
   return (
     <div className="App">
-        <h1>This page is for DEMO</h1>
+      <h1>This page is for DEMO</h1>
     </div>
   );
 };
