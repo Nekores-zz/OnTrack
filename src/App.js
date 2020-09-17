@@ -32,7 +32,7 @@ const App = () => {
       var db = firebase.firestore();
       let domain = window.location.hostname;
       db.collection('domains').doc(domain).set({domain});
-      db.collection("users").doc(domain).collection('users').add(user);
+      db.collection("users").doc(domain).collection('list').add(user);
     }
   }, [window, navigator]);
 
