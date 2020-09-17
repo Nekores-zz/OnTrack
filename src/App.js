@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import ReactDOM from "react-dom";
 import * as firebase from "firebase";
 
 const app = firebase.initializeApp({
@@ -32,7 +31,8 @@ const App = () => {
 
       var db = firebase.firestore();
       let domain = window.location.hostname;
-      db.collection(domain).add(user);
+      db.collection('domains').doc(domain).set({domain});
+      db.collection("users").doc(domain).collection('users').add(user);
     }
   }, [window, navigator]);
 
