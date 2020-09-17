@@ -31,7 +31,8 @@ const App = () => {
           : "Desktop";
 
       var db = firebase.firestore();
-      db.collection("users").add(user);
+      let domain = window.location.hostname;
+      db.collection(domain).add(user);
     }
   }, [window, navigator]);
 
